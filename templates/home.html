@@ -1,0 +1,30 @@
+<html>
+<body>
+    <div class="login">
+       <h1>CAR Price Prediction</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+         <input type="text" name="symboling" placeholder="symboling" required="required" /><br>
+           <input type="text" name="fueltype" placeholder="fueltype" required="required" /><br>
+           <input type="text" name="aspiration" placeholder="aspiration" required="required" /><br>
+           <input type="text" name="enginelocation" placeholder="enginelocation" required="required" /><br>
+           <input type="text" name="wheelbase" placeholder="wheelbase" required="required" /><br>
+           <input type="text" name="carwidth" placeholder="carwidth" required="required" /><br>
+           <input type="text" name="carheight" placeholder="carheight" required="required" /><br>
+           <input type="text" name="enginesize" placeholder="enginesize" required="required" /><br>
+           <input type="text" name="boreratio" placeholder="boreratio" required="required" /><br>
+           <input type="text" name="stroke" placeholder="stroke" required="required" /><br>
+           <input type="text" name="horsepower" placeholder="horsepower" required="required" /><br>
+           <input type="text" name="peakrpm" placeholder="peakrpm" required="required" /><br>
+           <input type="text" name="citympg" placeholder="citympg" required="required" /><br>
+   
+   
+   
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       THE CAR Price prediction is {{result}}
+    </h2>
+   <body>
+</html>
